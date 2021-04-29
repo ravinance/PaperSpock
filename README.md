@@ -1,7 +1,7 @@
 # Paper Rock Scissor Spock Lizard ! 
 
-**RULES: 
-**Scissors cuts Paper
+**RULES**
+Scissors cuts Paper
 Paper covers Rock
 Rock crushes Lizard
 Lizard poisons Spock
@@ -14,8 +14,8 @@ Spock vaporizes Rock
 
 
 
-**To play the game type in the console: playGame('yourchoice') 
-**
+To play the game type in the console: playGame('yourchoice') 
+
 Where your choice is either: 
 - paper
 - rock
