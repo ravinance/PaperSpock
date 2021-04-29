@@ -1,0 +1,92 @@
+<script>
+ // fonction de selection de l'user    
+function getUserChoice(userInput) {
+   userInput = userInput.toLowerCase();
+  if (userInput === 'paper') {
+    return 'paper';
+  } else if (userInput === 'rock') {
+    return 'rock';
+  } else if (userInput === 'scissors'|| userInput === 'scissor') {
+    return 'scissors';
+} else if (userInput === 'lizard') {
+    return 'lizard';
+} else if (userInput === 'spock') {
+    return 'spock';
+  } else 
+ console.log('Entry Error');
+};
+
+// fonction aleatoire de selection du CPU
+function getCPUChoice() {
+let number = Math.floor(Math.random() * 5);
+if (number === 0) {
+    return 'paper';
+} else if (number === 1) {
+  return 'rock'; 
+} else if (number === 2) {
+  return 'scissors'; 
+} else if (number === 3) {
+  return 'lizard'; 
+} else if (number === 4) {
+  return 'spock'; 
+}
+};
+
+// function pour determiner le gagnant
+function determineWinner(userChoice, CPUchoice) {
+if (userChoice === CPUchoice) {
+  return 'Tie !';
+}
+if (userChoice === 'rock') {
+  if (CPUchoice === 'paper' || CPUchoice === 'spock') {
+    return 'You loose'; 
+  } else {
+    return 'you won!';
+  }
+}
+if (userChoice === 'paper') {
+  if (CPUchoice === 'scissors' || CPUchoice === 'lizard') {
+    return 'You loose';
+  } else {
+    return 'you won!';
+  }
+}
+if (userChoice === 'scissors') {
+  if (CPUchoice === 'rock' || CPUchoice === 'spock') {
+    return 'You loose';
+  } else {
+    return 'you won!';
+  }
+}
+if (userChoice === 'lizard') {
+  if (CPUchoice === 'rock' || CPUchoice === 'scissors') {
+    return 'You loose';
+  } else {
+    return 'you won!';
+  }
+}
+if (userChoice === 'spock') {
+  if (CPUchoice === 'lizard' || CPUchoice === 'paper') {
+    return 'You loose';
+  } else {
+    return 'you won!';
+  }
+}
+}
+
+
+// function pour activer le jeux et faire un retour console
+function playGame(userChoice) {
+var userChoice = getUserChoice(userChoice);
+var CPUchoice = getCPUChoice();
+console.log('you threw: ' + userChoice);
+console.log('the CPU threw: ' + CPUchoice);
+console.log(determineWinner(userChoice, CPUchoice));
+};
+
+
+
+
+</script>
+
+<h1>Copyright Ravinance</h1>
